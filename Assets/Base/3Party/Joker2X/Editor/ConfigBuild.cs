@@ -194,42 +194,42 @@ public class ConfigBuild
         PlayerSettings.SetScriptingDefineSymbolsForGroup(BuildTargetGroup.Android, "ODIN_INSPECTOR,ODIN_INSPECTOR_3,MOREMOUNTAINS_NICEVIBRATIONS");
 
         flagchange = false;
-        Config.settingVersionCode = Config.versionCode;
+        ConfigGameBase.settingVersionCode = ConfigGameBase.versionCode;
 
 #if UNITY_IOS || UNITY_ANDROID
-        if (Config.package_name.CompareTo(PlayerSettings.applicationIdentifier) != 0)
+        if (ConfigGameBase.package_name.CompareTo(PlayerSettings.applicationIdentifier) != 0)
         {
-            PlayerSettings.applicationIdentifier = Config.package_name;
+            PlayerSettings.applicationIdentifier = ConfigGameBase.package_name;
             flagchange = true;
         }
-        if (Config.settingVersionName.CompareTo(PlayerSettings.bundleVersion) != 0)
+        if (ConfigGameBase.settingVersionName.CompareTo(PlayerSettings.bundleVersion) != 0)
         {
-            PlayerSettings.bundleVersion = Config.settingVersionName;
+            PlayerSettings.bundleVersion = ConfigGameBase.settingVersionName;
             flagchange = true;
         }
 #endif
 #if UNITY_ANDROID
         PlayerSettings.SetScriptingBackend(EditorUserBuildSettings.selectedBuildTargetGroup, ScriptingImplementation.IL2CPP);
-        if (Config.settingVersionCode.CompareTo(PlayerSettings.Android.bundleVersionCode) != 0)
+        if (ConfigGameBase.settingVersionCode.CompareTo(PlayerSettings.Android.bundleVersionCode) != 0)
         {
-            PlayerSettings.Android.bundleVersionCode = Config.settingVersionCode;
+            PlayerSettings.Android.bundleVersionCode = ConfigGameBase.settingVersionCode;
             flagchange = true;
         }
-        if (Config.settingProductName.CompareTo(PlayerSettings.productName) != 0)
+        if (ConfigGameBase.settingProductName.CompareTo(PlayerSettings.productName) != 0)
         {
-            PlayerSettings.productName = Config.settingProductName;
+            PlayerSettings.productName = ConfigGameBase.settingProductName;
             flagchange = true;
         }
 
         PlayerSettings.Android.keystoreName = KeyStorePath;
-        PlayerSettings.Android.keyaliasName = Config.settingAliasName;
-        PlayerSettings.Android.keyaliasPass = Config.keyaliasPass;
-        PlayerSettings.Android.keystorePass = Config.keystorePass;
+        PlayerSettings.Android.keyaliasName = ConfigGameBase.settingAliasName;
+        PlayerSettings.Android.keyaliasPass = ConfigGameBase.keyaliasPass;
+        PlayerSettings.Android.keystorePass = ConfigGameBase.keystorePass;
 
         AndroidArchitecture aac = AndroidArchitecture.ARM64 | AndroidArchitecture.ARMv7;
         PlayerSettings.Android.targetArchitectures = aac;
 #endif
-        SwapAsset(Path.Combine(Application.dataPath, String.Format(IconPath, Config.settingLogo)), Path.Combine(Application.dataPath, ActiveIconPath));
+        SwapAsset(Path.Combine(Application.dataPath, String.Format(IconPath, ConfigGameBase.settingLogo)), Path.Combine(Application.dataPath, ActiveIconPath));
         AssetDatabase.Refresh();
 
 
@@ -317,7 +317,7 @@ public class ConfigBuild
     static void IncreaseVersion()
     {
 #if UNITY_ANDROID
-        PlayerSettings.Android.bundleVersionCode = Config.settingVersionCode + 1;
+        PlayerSettings.Android.bundleVersionCode = ConfigGameBase.settingVersionCode + 1;
         PlayerSettings.bundleVersion = string.Format("1.{0}", PlayerSettings.Android.bundleVersionCode);
 #endif
     }
@@ -342,8 +342,8 @@ public class ConfigBuild
         XmlElement renameGCM = FindElementWithAndroidName("receiver", "name", ns, UnityGCMReceiver, dict);
         XmlNode curr = renameGCM.FirstChild;
         XmlElement element = (XmlElement)FindChildNode(curr, "category");
-        if (element.Name.CompareTo(Config.package_name) == 0) return;
-        element.SetAttribute("name", ns, Config.package_name);
+        if (element.Name.CompareTo(ConfigGameBase.package_name) == 0) return;
+        element.SetAttribute("name", ns, ConfigGameBase.package_name);
         curr = manNode.FirstChild;
         while (curr != null)
         {
@@ -356,7 +356,7 @@ public class ConfigBuild
             }
             if (element.GetAttribute("name", ns).Contains("C2D_MESSAGE"))
             {
-                element.SetAttribute("name", ns, Config.package_name + remaneC2DM);
+                element.SetAttribute("name", ns, ConfigGameBase.package_name + remaneC2DM);
             }
             curr = curr.NextSibling;
         }
@@ -412,7 +412,7 @@ public class ConfigBuild
     static string GetFileName(string surFix)
     {
         string outputName = GetArg("-outputName");
-        return string.Format("{0}{1}", outputName ?? Config.productNameBuild, surFix);
+        return string.Format("{0}{1}", outputName ?? ConfigGameBase.productNameBuild, surFix);
     }
 
     static string GetFilePath(string surFix, string apk = "apk")
@@ -426,7 +426,7 @@ public class ConfigBuild
         {
             var parentDirectory = Directory.GetParent(Application.dataPath);
             var path = Directory.CreateDirectory(Path.Combine(parentDirectory.FullName, "Builds"));
-            return Path.Combine(path.FullName, string.Format("{0}_{1}." + apk, GetFileName(surFix) + "_vc" + Config.versionCode, DateTime.Now.ToString("yy-MM-dd_h-mm-tt")));
+            return Path.Combine(path.FullName, string.Format("{0}_{1}." + apk, GetFileName(surFix) + "_vc" + ConfigGameBase.versionCode, DateTime.Now.ToString("yy-MM-dd_h-mm-tt")));
         }
     }
 
@@ -546,44 +546,44 @@ public class ConfigBuild
     public static void BuildTest()
     {
         flagchange = false;
-        Config.settingVersionCode = Config.versionCode;
+        ConfigGameBase.settingVersionCode = ConfigGameBase.versionCode;
 
         PlayerSettings.SetScriptingDefineSymbolsForGroup(BuildTargetGroup.Android, "ODIN_INSPECTOR,ODIN_INSPECTOR_3,MOREMOUNTAINS_NICEVIBRATIONS,TEST_BUILD");
 
 #if UNITY_IOS || UNITY_ANDROID
-        if (Config.package_name.CompareTo(PlayerSettings.applicationIdentifier) != 0)
+        if (ConfigGameBase.package_name.CompareTo(PlayerSettings.applicationIdentifier) != 0)
         {
-            PlayerSettings.applicationIdentifier = Config.package_name;
+            PlayerSettings.applicationIdentifier = ConfigGameBase.package_name;
             flagchange = true;
         }
-        if (Config.settingVersionName.CompareTo(PlayerSettings.bundleVersion) != 0)
+        if (ConfigGameBase.settingVersionName.CompareTo(PlayerSettings.bundleVersion) != 0)
         {
-            PlayerSettings.bundleVersion = Config.settingVersionName;
+            PlayerSettings.bundleVersion = ConfigGameBase.settingVersionName;
             flagchange = true;
         }
 #endif
 #if UNITY_ANDROID
         PlayerSettings.SetScriptingBackend(EditorUserBuildSettings.selectedBuildTargetGroup, ScriptingImplementation.IL2CPP);
-        if (Config.settingVersionCode.CompareTo(PlayerSettings.Android.bundleVersionCode) != 0)
+        if (ConfigGameBase.settingVersionCode.CompareTo(PlayerSettings.Android.bundleVersionCode) != 0)
         {
-            PlayerSettings.Android.bundleVersionCode = Config.settingVersionCode;
+            PlayerSettings.Android.bundleVersionCode = ConfigGameBase.settingVersionCode;
             flagchange = true;
         }
-        if (Config.settingProductName.CompareTo(PlayerSettings.productName) != 0)
+        if (ConfigGameBase.settingProductName.CompareTo(PlayerSettings.productName) != 0)
         {
-            PlayerSettings.productName = Config.settingProductName;
+            PlayerSettings.productName = ConfigGameBase.settingProductName;
             flagchange = true;
         }
 
         PlayerSettings.Android.keystoreName = KeyStorePath;
-        PlayerSettings.Android.keyaliasName = Config.settingAliasName;
-        PlayerSettings.Android.keyaliasPass = Config.keyaliasPass;
-        PlayerSettings.Android.keystorePass = Config.keystorePass;
+        PlayerSettings.Android.keyaliasName = ConfigGameBase.settingAliasName;
+        PlayerSettings.Android.keyaliasPass = ConfigGameBase.keyaliasPass;
+        PlayerSettings.Android.keystorePass = ConfigGameBase.keystorePass;
 
         AndroidArchitecture aac = AndroidArchitecture.ARM64 | AndroidArchitecture.ARMv7;
         PlayerSettings.Android.targetArchitectures = aac;
 #endif
-        SwapAsset(Path.Combine(Application.dataPath, String.Format(IconPath, Config.settingLogo)), Path.Combine(Application.dataPath, ActiveIconPath));
+        SwapAsset(Path.Combine(Application.dataPath, String.Format(IconPath, ConfigGameBase.settingLogo)), Path.Combine(Application.dataPath, ActiveIconPath));
         AssetDatabase.Refresh();
 
 

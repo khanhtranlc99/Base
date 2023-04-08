@@ -85,14 +85,14 @@ public class IAPPack
     {
         get
         {
-            return string.Format("{0}.{1}", Config.package_name, shortID);
+            return string.Format("{0}.{1}", ConfigGameBase.package_name, shortID);
         }
     }
     public string ProductID_Origin
     {
         get
         {
-            return string.Format("{0}.{1}.{2}", Config.package_name, shortID, SALE);
+            return string.Format("{0}.{1}.{2}", ConfigGameBase.package_name, shortID, SALE);
         }
     }
 

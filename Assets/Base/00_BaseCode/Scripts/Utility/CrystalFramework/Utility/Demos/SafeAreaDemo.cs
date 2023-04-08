@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System;
 
 namespace Crystal
@@ -12,7 +12,7 @@ namespace Crystal
         void Awake ()
         {
             if (!Application.isEditor)
-                Destroy (gameObject);
+                Destroy (this);
 
             Sims = (SafeArea.SimDevice[])Enum.GetValues (typeof (SafeArea.SimDevice));
         }
@@ -33,8 +33,8 @@ namespace Crystal
             if (SimIdx >= Sims.Length)
                 SimIdx = 0;
 
-            SafeArea.Sim = Sims[SimIdx];
-            Debug.LogFormat ("Switched to sim device {0} with debug key '{1}'", Sims[SimIdx], KeySafeArea);
+            //SafeArea.Sim = Sims[SimIdx];
+            //Debug.LogFormat ("Switched to sim device {0} with debug key '{1}'", Sims[SimIdx], KeySafeArea);
         }
     }
 }

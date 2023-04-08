@@ -636,8 +636,8 @@ public class GSocket : SingletonClass<GSocket>, IService
             request.Platform = 0;
 #endif
            
-            request.AppVersion = Config.versionCode;
-            request.PackageName = Config.package_name;
+            request.AppVersion = ConfigGameBase.versionCode;
+            request.PackageName = ConfigGameBase.package_name;
             request.DataVersion = UserDataServices.DataChangeCount;
             return request;
         }

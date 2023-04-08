@@ -33,7 +33,7 @@ public class PingPanel : MonoBehaviour
 
     private void Start()
     {
-        _version = Config.versionCode;
+        _version = ConfigGameBase.versionCode;
 #if UNITY_ANDROID
         _osName = "A.";
 #else

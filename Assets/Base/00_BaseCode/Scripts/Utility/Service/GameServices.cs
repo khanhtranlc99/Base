@@ -115,7 +115,7 @@ public class GameServices : SingletonClass<GameServices>, IService
 
                     }, ex =>
                     {
-                        Debug.LogError("Check Firebase dependencies: " + ex.Message);
+                      //  Debug.LogError("Check Firebase dependencies: " + ex.Message);
                     });
 
         InitFacebook();
@@ -260,7 +260,7 @@ public class GameServices : SingletonClass<GameServices>, IService
         AdjustEnvironment environment = AdjustEnvironment.Production;
 
 
-        AdjustConfig config = new AdjustConfig(Config.ADJUST_APP_TOKEN, environment, true);
+        AdjustConfig config = new AdjustConfig(ConfigGameBase.ADJUST_APP_TOKEN, environment, true);
 #if ENV_PROD
         config.setLogLevel(AdjustLogLevel.Suppress);
 #else

@@ -19,7 +19,7 @@ public class AdsController : MonoBehaviour
     private bool isShownBanner;
     private bool loadBannerCalled;
 
-    private const string IronsouceAppID = Config.IRONSOURCE_DEV_KEY;
+    private const string IronsouceAppID = ConfigGameBase.IRONSOURCE_DEV_KEY;
 
     private IEnumerator reloadInterCoru;
 

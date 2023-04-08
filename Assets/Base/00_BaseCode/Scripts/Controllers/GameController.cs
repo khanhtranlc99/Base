@@ -18,7 +18,7 @@ public class GameController : MonoBehaviour
     public MoneyEffectController moneyEffectController;
     public UseProfile useProfile;
     public DataContain dataContain;
-    public MusicManager musicManager;
+    public MusicManagerGameBase musicManager;
     public AdmobAds admobAds;
     public AnalyticsController AnalyticsController;
     public IapController iapController;
