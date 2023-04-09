@@ -325,12 +325,16 @@ public class WinPopup2 : MonoBehaviour
     private void TouchNextLevel()
     {
         lockGroup.gameObject.SetActive(true);
+        //GameController.Instance.admobAds.ShowInterstitial(actionIniterClose: () =>
+        //{
+        //    GamePlayManager.instance.SetNextGame();
+        //}, actionWatchLog: "Next_Level");
         //if (AdmobManager.instance.isInterstititalAds_Avaiable())
         //{
         //    lockGroup.gameObject.SetActive(true);
         //    AdmobManager.instance.ShowInterstitialAd_CallBack((AdmobManager.ADS_CALLBACK_STATE state) =>
         //    {
-                
+
         //        GamePlayManager.instance.SetNextGame();
         //    });
         //}
@@ -346,20 +350,26 @@ public class WinPopup2 : MonoBehaviour
     private void TouchHome()
     {
         lockGroup.gameObject.SetActive(true);
-        if (AdmobManager.instance.isInterstititalAds_Avaiable())
-        {
-            lockGroup.gameObject.SetActive(true);
-            AdmobManager.instance.ShowInterstitialAd_CallBack((AdmobManager.ADS_CALLBACK_STATE state) =>
-            {
-                SceneManager.LoadScene("Menu");
-            });
-        }
-        else
-        {
-            Show_Static_Ad();   
-            Time.timeScale = 1f;
-            SceneManager.LoadScene("Menu");
-        }
+        //if (AdmobManager.instance.isInterstititalAds_Avaiable())
+        //{
+        //    lockGroup.gameObject.SetActive(true);
+        //    AdmobManager.instance.ShowInterstitialAd_CallBack((AdmobManager.ADS_CALLBACK_STATE state) =>
+        //    {
+        //        SceneManager.LoadScene("Menu");
+        //    });
+        //}
+        //else
+        //{
+        //    Show_Static_Ad();   
+        //    Time.timeScale = 1f;
+        //    SceneManager.LoadScene("Menu");
+        //}
+        //GameController.Instance.admobAds.ShowInterstitial(actionIniterClose: () =>
+        //{
+        //    SceneManager.LoadScene("Menu");
+        //}, actionWatchLog: "Next_Level");
+
+        SceneManager.LoadScene("Menu");
     }
     
 }

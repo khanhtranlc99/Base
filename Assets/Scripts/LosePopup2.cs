@@ -256,20 +256,21 @@ public class LosePopup2 : MonoBehaviour
     private void TouchHome()
     {
         lockGroup.gameObject.SetActive(true);
-        if (AdmobManager.instance.isInterstititalAds_Avaiable())
-        {
-            lockGroup.gameObject.SetActive(true);
-            AdmobManager.instance.ShowInterstitialAd_CallBack((AdmobManager.ADS_CALLBACK_STATE state) =>
-            {
-                SceneManager.LoadScene("Menu");
-            });
-        }
-        else
-        {
-            Show_Static_Ad();   
-            Time.timeScale = 1f;
-            SceneManager.LoadScene("Menu");
-        }
+        //if (AdmobManager.instance.isInterstititalAds_Avaiable())
+        //{
+        //    lockGroup.gameObject.SetActive(true);
+        //    AdmobManager.instance.ShowInterstitialAd_CallBack((AdmobManager.ADS_CALLBACK_STATE state) =>
+        //    {
+        //        SceneManager.LoadScene("Menu");
+        //    });
+        //}
+        //else
+        //{
+        //    Show_Static_Ad();   
+        //    Time.timeScale = 1f;
+        //    SceneManager.LoadScene("Menu");
+        //}
+        SceneManager.LoadScene("Menu");
     }
 
     private void TouchRestart()

@@ -15,14 +15,15 @@ public class GameController : MonoBehaviour
 {
     public static GameController Instance;
 
-    public MoneyEffectController moneyEffectController;
-    public UseProfile useProfile;
+    [HideInInspector] public MoneyEffectController moneyEffectController;
+     public UseProfile useProfile;
     public DataContain dataContain;
-    public MusicManagerGameBase musicManager;
+    [HideInInspector] public MusicManagerGameBase musicManager;
     public AdmobAds admobAds;
-    public AnalyticsController AnalyticsController;
+    [HideInInspector] public AnalyticsController AnalyticsController;
     public IapController iapController;
     [HideInInspector] public SceneType currentScene;
+  
 
 
     protected void Awake()
@@ -51,20 +52,21 @@ public class GameController : MonoBehaviour
 
     private void Start()
     {
-        musicManager.PlayBGMusic();
+     //   musicManager.PlayBGMusic();
      
     }
 
     public void Init()
     {
 
-        UseProfile.NumberOfAdsInPlay = 0;
+       
         //Application.targetFrameRate = 60;
         //useProfile.CurrentLevelPlay = UseProfile.CurrentLevel;
         admobAds.Init();
-        musicManager.Init();
-        //iapController.Init();
-        MMVibrationManager.SetHapticsActive(useProfile.OnVibration);
+        //musicManager.Init();
+        iapController.Init();
+    
+
         // GameController.Instance.admobAds.ShowBanner();
     }
 

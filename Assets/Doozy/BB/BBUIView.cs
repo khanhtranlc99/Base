@@ -72,7 +72,15 @@ public class BBUIView : UIComponentBase<BBUIView>
 
             if (Visibility == VisibilityState.Showing) return;
 
-            m_showCoroutine = StartCoroutine(ShowEnumerator());
+            try
+            {
+                m_showCoroutine = StartCoroutine(ShowEnumerator());
+            }
+            catch
+            {
+
+            }
+       
         }
         else {
             gameObject.SetActive(true);

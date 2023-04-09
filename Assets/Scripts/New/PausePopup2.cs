@@ -120,23 +120,24 @@ public class PausePopup2 : MonoBehaviour
         lockGroup.gameObject.SetActive(true);
         if (Config.currLevel >= Config.interstitialAd_levelShowAd)
         {
-            if (AdmobManager.instance.isInterstititalAds_Avaiable())
-            {
-                lockGroup.gameObject.SetActive(true);
-                AdmobManager.instance.ShowInterstitialAd_CallBack((AdmobManager.ADS_CALLBACK_STATE state) =>
-                {
-                    // popup.GetComponent<BBUIView>().HideView();
-                    Time.timeScale = 1f;
-                    SceneManager.LoadScene("Menu");
+            //if (AdmobManager.instance.isInterstititalAds_Avaiable())
+            //{
+            //    lockGroup.gameObject.SetActive(true);
+            //    AdmobManager.instance.ShowInterstitialAd_CallBack((AdmobManager.ADS_CALLBACK_STATE state) =>
+            //    {
+            //        // popup.GetComponent<BBUIView>().HideView();
+            //        Time.timeScale = 1f;
+            //        SceneManager.LoadScene("Menu");
                     
-                });
-            }
-            else
-            {
-                // popup.GetComponent<BBUIView>().HideView();
-                Time.timeScale = 1f;
-                SceneManager.LoadScene("Menu");
-            }
+            //    });
+            //}
+            //else
+            //{
+            //    // popup.GetComponent<BBUIView>().HideView();
+            //    Time.timeScale = 1f;
+            //    SceneManager.LoadScene("Menu");
+            //}
+            SceneManager.LoadScene("Menu");
         }
         else
         {

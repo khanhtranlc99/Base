@@ -114,8 +114,8 @@
     <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Runtime\Scripts\Genuine\CodeHash\SHA1Wrapper.cs" />
     <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Runtime\Scripts\ObscuredTypes\ObscuredUShort.cs" />
     <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Runtime\Scripts\Genuine\CodeHash\Workers\StandaloneWindowsWorker.cs" />
-    <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Runtime\Scripts\Storage\Data\Enums\StorageDataType.cs" />
     <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Runtime\Scripts\ObscuredTypes\ObscuredULong.cs" />
+    <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Runtime\Scripts\Storage\Data\Enums\StorageDataType.cs" />
     <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Runtime\Scripts\Storage\File\Prefs\Serialization\Serializers\BinarySerializer.cs" />
     <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Runtime\Scripts\Common\ACTk.cs" />
     <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Runtime\Scripts\Detectors\ObscuredCheatingDetector.cs" />
@@ -385,6 +385,9 @@
     <Reference Include="XInputDotNetPure">
       <HintPath>Assets\Base\FacebookSDK\Plugins\Windows\XInputDotNetPure.dll</HintPath>
     </Reference>
+    <Reference Include="DDebug">
+      <HintPath>Assets\Doozy\Engine\Debug\DDebug.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Plastic.Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@1.17.2\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -412,6 +415,9 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="Firebase.RemoteConfig">
+      <HintPath>Library\PackageCache\com.google.firebase.remote-config@857f0ad3a432\Firebase\Plugins\Firebase.RemoteConfig.dll</HintPath>
+    </Reference>
     <Reference Include="Firebase.Analytics">
       <HintPath>Library\PackageCache\com.google.firebase.analytics@3dbb301ca953\Firebase\Plugins\Firebase.Analytics.dll</HintPath>
     </Reference>
@@ -420,9 +426,6 @@
     </Reference>
     <Reference Include="Sirenix.OdinInspector.Editor">
       <HintPath>Assets\Base\Plugins\Sirenix\Assemblies\Sirenix.OdinInspector.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Firebase.RemoteConfig">
-      <HintPath>Library\PackageCache\com.google.firebase.remote-config@857f0ad3a432\Firebase\Plugins\Firebase.RemoteConfig.dll</HintPath>
     </Reference>
     <Reference Include="Win81Interface">
       <HintPath>Assets\Base\3Party\Adjust\Windows\Stubs\Win81Interface.dll</HintPath>
@@ -433,23 +436,26 @@
     <Reference Include="Google.VersionHandler">
       <HintPath>Library\PackageCache\com.google.external-dependency-manager@ba0856d357b9\ExternalDependencyManager\Editor\Google.VersionHandler.dll</HintPath>
     </Reference>
-    <Reference Include="unityplastic">
-      <HintPath>Library\PackageCache\com.unity.collab-proxy@1.17.2\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
-    </Reference>
     <Reference Include="Win10Interface">
       <HintPath>Assets\Base\3Party\Adjust\Windows\Stubs\Win10Interface.dll</HintPath>
     </Reference>
+    <Reference Include="unityplastic">
+      <HintPath>Library\PackageCache\com.unity.collab-proxy@1.17.2\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip.Unity">
+      <HintPath>Assets\Plugins\Ionic.Zip.Unity.dll</HintPath>
+    </Reference>
     <Reference Include="Firebase.Crashlytics">
       <HintPath>Library\PackageCache\com.google.firebase.crashlytics@36b50a7241bd\Firebase\Plugins\Firebase.Crashlytics.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.IOSResolver">
+      <HintPath>Library\PackageCache\com.google.external-dependency-manager@ba0856d357b9\ExternalDependencyManager\Editor\1.2.175\Google.IOSResolver.dll</HintPath>
     </Reference>
     <Reference Include="Firebase.Messaging.Editor">
       <HintPath>Library\PackageCache\com.google.firebase.messaging@e7d076dac6d1\Firebase\Editor\Firebase.Messaging.Editor.dll</HintPath>
     </Reference>
     <Reference Include="DOTween">
       <HintPath>Assets\Base\3Party\Demigiant\DOTween\DOTween.dll</HintPath>
-    </Reference>
-    <Reference Include="Google.IOSResolver">
-      <HintPath>Library\PackageCache\com.google.external-dependency-manager@ba0856d357b9\ExternalDependencyManager\Editor\1.2.175\Google.IOSResolver.dll</HintPath>
     </Reference>
     <Reference Include="Firebase.App">
       <HintPath>Library\PackageCache\com.google.firebase.app@18c3e06f7f0f\Firebase\Plugins\Firebase.App.dll</HintPath>
@@ -493,6 +499,9 @@
     <Reference Include="DOTweenPro">
       <HintPath>Assets\Base\3Party\Demigiant\DOTweenPro\DOTweenPro.dll</HintPath>
     </Reference>
+    <Reference Include="LitJson">
+      <HintPath>Assets\Plugins\LitJson.dll</HintPath>
+    </Reference>
     <Reference Include="Firebase.Editor">
       <HintPath>Library\PackageCache\com.google.firebase.app@18c3e06f7f0f\Firebase\Editor\Firebase.Editor.dll</HintPath>
     </Reference>
@@ -516,15 +525,6 @@
     </Reference>
     <Reference Include="Facebook.Unity">
       <HintPath>Assets\Base\FacebookSDK\Plugins\Facebook.Unity.dll</HintPath>
-    </Reference>
-    <Reference Include="DDebug">
-      <HintPath>Assets\Doozy\Engine\Debug\DDebug.dll</HintPath>
-    </Reference>
-    <Reference Include="Ionic.Zip.Unity">
-      <HintPath>Assets\Plugins\Ionic.Zip.Unity.dll</HintPath>
-    </Reference>
-    <Reference Include="LitJson">
-      <HintPath>Assets\Plugins\LitJson.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>D:\Unity2020.3.15f2\2020.3.38f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>

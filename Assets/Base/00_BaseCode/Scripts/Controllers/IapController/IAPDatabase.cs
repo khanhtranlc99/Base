@@ -12,18 +12,15 @@ public enum TypePackIAP
     NoAdsPack = 2,
     GoodsPass = 3,
     SuperGamePack = 4,
-    StarterPack = 5,
+    Special_Pack = 5,
     ValuePack = 6,
     ShinyPack = 7,
     HugePack = 8,
     MegaPack = 9,
     MasterPack = 10,
-    CoinPack_900 = 11,
-    CoinPack_2400 = 12,
-    CoinPack_5400 = 13,
-    CoinPack_11700 = 14,
-    CoinPack_25500 = 15,
-    CoinPack_48000 = 16,
+    CoinPack_500 = 11,
+    CoinPack_1000 = 12,
+
 
 
 }
@@ -186,11 +183,13 @@ public class IAPPack
                     {
                         if (lstReward.Count <= 1)
                         {
-                            RewardIAPBox.Setup2().Show(lstReward, actionClaim: () => { actClaimDone?.Invoke(); });
+                            //  RewardIAPBox.Setup2().Show(lstReward, actionClaim: () => { actClaimDone?.Invoke(); });
+                            NotificationPopup.instance.AddNotification("Buy Success!");
                         }
                         else
                         {
-                            RewardIAPBox.Setup2(true).Show(lstReward, actionClaim: () => { actClaimDone?.Invoke(); });
+                            //  RewardIAPBox.Setup2(true).Show(lstReward, actionClaim: () => { actClaimDone?.Invoke(); });
+                            NotificationPopup.instance.AddNotification("Buy Success!");
                         }
                     }
                 }
@@ -199,11 +198,13 @@ public class IAPPack
             {
                 if (lstReward.Count <= 1)
                 {
-                    RewardIAPBox.Setup2().Show(lstReward, actionClaim: () => { actClaimDone?.Invoke(); });
+                    // RewardIAPBox.Setup2().Show(lstReward, actionClaim: () => { actClaimDone?.Invoke(); });
+                    NotificationPopup.instance.AddNotification("Buy Success!");
                 }
                 else
                 {
-                    RewardIAPBox.Setup2(true).Show(lstReward, actionClaim: () => { actClaimDone?.Invoke(); });
+                    //   RewardIAPBox.Setup2(true).Show(lstReward, actionClaim: () => { actClaimDone?.Invoke(); });
+                    NotificationPopup.instance.AddNotification("Buy Success!");
                 }
             }    
         

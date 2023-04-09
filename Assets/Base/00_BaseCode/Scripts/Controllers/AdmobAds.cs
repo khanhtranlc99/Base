@@ -33,7 +33,8 @@ public class AdmobAds : MonoBehaviour
     public void Init()
     {
         ironsourceController.Init();
-        countdownAds = 1000;
+        countdownAds = 60;
+        //ShowBanner();
     }
 
     #region Interstitial
@@ -52,7 +53,7 @@ public class AdmobAds : MonoBehaviour
 #endif
 
 
-        if (UseProfile.CurrentLevel > RemoteConfigController.GetFloatConfig(FirebaseConfig.LEVEL_START_SHOW_INITSTIALL, 0))
+        if (UseProfile.CurrentLevel > RemoteConfigController.GetFloatConfig(FirebaseConfig.LEVEL_START_SHOW_INITSTIALL, 2))
         {
             GameController.Instance.AnalyticsController.LoadInterEligible();
 

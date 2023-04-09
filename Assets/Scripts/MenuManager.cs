@@ -18,6 +18,7 @@ public class MenuManager : MonoBehaviour
     public BBUIButton btnRemoveAd, btnChest;
     public Image logo;
     public GameObject lockGroup;
+    public GameObject shop;
     private void Awake()
     {
         instance = this;
@@ -74,7 +75,8 @@ public class MenuManager : MonoBehaviour
 
     public void TouchShop()
     {
-        shopPopup.OpenPopup();
+        //shopPopup.OpenPopup();
+        shop.gameObject.SetActive(true);
     }
 
     public void OpenShopCoin()
@@ -254,7 +256,26 @@ public class MenuManager : MonoBehaviour
     }
 
 
+    public void TestCoin()
+    {
+        GameController.Instance.dataContain.giftDatabase.Claim(GiftType.Coin,1000);
+    }
 
+    public void TestL()
+    {
+        GameController.Instance.dataContain.giftDatabase.Claim(GiftType.ShuffleBooster, 50);
+
+    }
+
+    public void TestB()
+    {
+       
+    }
+
+    public void TestS()
+    {
+
+    }
 
 
 
