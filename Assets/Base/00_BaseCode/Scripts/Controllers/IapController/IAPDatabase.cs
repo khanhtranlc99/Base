@@ -184,12 +184,12 @@ public class IAPPack
                         if (lstReward.Count <= 1)
                         {
                             //  RewardIAPBox.Setup2().Show(lstReward, actionClaim: () => { actClaimDone?.Invoke(); });
-                            NotificationPopup.instance.AddNotification("Buy Success!");
+                           // NotificationPopup.instance.AddNotification("Buy Success!");
                         }
                         else
                         {
                             //  RewardIAPBox.Setup2(true).Show(lstReward, actionClaim: () => { actClaimDone?.Invoke(); });
-                            NotificationPopup.instance.AddNotification("Buy Success!");
+                        //    NotificationPopup.instance.AddNotification("Buy Success!");
                         }
                     }
                 }
@@ -199,12 +199,12 @@ public class IAPPack
                 if (lstReward.Count <= 1)
                 {
                     // RewardIAPBox.Setup2().Show(lstReward, actionClaim: () => { actClaimDone?.Invoke(); });
-                    NotificationPopup.instance.AddNotification("Buy Success!");
+                 //   NotificationPopup.instance.AddNotification("Buy Success!");
                 }
                 else
                 {
                     //   RewardIAPBox.Setup2(true).Show(lstReward, actionClaim: () => { actClaimDone?.Invoke(); });
-                    NotificationPopup.instance.AddNotification("Buy Success!");
+                   // NotificationPopup.instance.AddNotification("Buy Success!");
                 }
             }    
         

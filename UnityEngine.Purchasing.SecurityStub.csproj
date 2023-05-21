@@ -54,6 +54,32 @@
   </PropertyGroup>
   <ItemGroup>
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
+    <Analyzer Include="E:\NewDemonMinh\ProjectBase\Assets\Base\3Party\Adjust\Windows\W81\Win81Interface.dll" />
+    <Analyzer Include="E:\NewDemonMinh\ProjectBase\Assets\Base\3Party\Demigiant\DOTween\Editor\DOTweenEditor.dll" />
+    <Analyzer Include="E:\NewDemonMinh\ProjectBase\Assets\Base\Plugins\Sirenix\Assemblies\Sirenix.Serialization.Config.dll" />
+    <Analyzer Include="E:\NewDemonMinh\ProjectBase\Assets\Base\3Party\Demigiant\DOTweenPro\Editor\DOTweenProEditor.dll" />
+    <Analyzer Include="E:\NewDemonMinh\ProjectBase\Assets\Base\Plugins\Sirenix\Assemblies\Sirenix.OdinInspector.Editor.dll" />
+    <Analyzer Include="E:\NewDemonMinh\ProjectBase\Assets\Base\3Party\Adjust\Windows\Newtonsoft.Json.dll" />
+    <Analyzer Include="E:\NewDemonMinh\ProjectBase\Assets\Base\Plugins\Sirenix\Assemblies\NoEditor\Sirenix.Utilities.dll" />
+    <Analyzer Include="E:\NewDemonMinh\ProjectBase\Assets\Base\3Party\Adjust\Windows\WU10\AdjustUAP10.dll" />
+    <Analyzer Include="E:\NewDemonMinh\ProjectBase\Assets\Base\Plugins\Sirenix\Assemblies\Sirenix.Serialization.dll" />
+    <Analyzer Include="E:\NewDemonMinh\ProjectBase\Assets\Base\3Party\Adjust\Windows\WS\WinWsInterface.dll" />
+    <Analyzer Include="E:\NewDemonMinh\ProjectBase\Assets\Base\Plugins\Sirenix\Assemblies\NoEditor\Sirenix.Serialization.dll" />
+    <Analyzer Include="E:\NewDemonMinh\ProjectBase\Assets\Base\Plugins\Sirenix\Assemblies\NoEmitAndNoEditor\Sirenix.Serialization.dll" />
+    <Analyzer Include="E:\NewDemonMinh\ProjectBase\Assets\Base\3Party\Adjust\Windows\WU10\Win10Interface.dll" />
+    <Analyzer Include="E:\NewDemonMinh\ProjectBase\Assets\Base\3Party\Demigiant\DOTween\DOTween.dll" />
+    <Analyzer Include="E:\NewDemonMinh\ProjectBase\Assets\Base\3Party\Adjust\Windows\Stubs\Win81Interface.dll" />
+    <Analyzer Include="E:\NewDemonMinh\ProjectBase\Assets\Base\3Party\Adjust\Windows\WS\AdjustWS.dll" />
+    <Analyzer Include="E:\NewDemonMinh\ProjectBase\Assets\Base\Plugins\Sirenix\Assemblies\Sirenix.Utilities.dll" />
+    <Analyzer Include="E:\NewDemonMinh\ProjectBase\Assets\Base\3Party\Adjust\Windows\Stubs\Win10Interface.dll" />
+    <Analyzer Include="E:\NewDemonMinh\ProjectBase\Assets\Base\3Party\Adjust\Windows\WindowsPcl.dll" />
+    <Analyzer Include="E:\NewDemonMinh\ProjectBase\Assets\Base\Plugins\Sirenix\Assemblies\Sirenix.OdinInspector.Attributes.dll" />
+    <Analyzer Include="E:\NewDemonMinh\ProjectBase\Assets\Base\Plugins\Sirenix\Assemblies\NoEmitAndNoEditor\Sirenix.Utilities.dll" />
+    <Analyzer Include="E:\NewDemonMinh\ProjectBase\Assets\Base\3Party\Adjust\Windows\W81\AdjustWP81.dll" />
+    <Analyzer Include="E:\NewDemonMinh\ProjectBase\Assets\Base\Plugins\Sirenix\Assemblies\Sirenix.Utilities.Editor.dll" />
+    <Analyzer Include="E:\NewDemonMinh\ProjectBase\Assets\Base\3Party\Adjust\Windows\Stubs\WinWsInterface.dll" />
+    <Analyzer Include="E:\NewDemonMinh\ProjectBase\Assets\Base\3Party\Adjust\Windows\WindowsUap.dll" />
+    <Analyzer Include="E:\NewDemonMinh\ProjectBase\Assets\Base\3Party\Demigiant\DOTweenPro\DOTweenPro.dll" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Library\PackageCache\com.unity.purchasing@4.4.1\Runtime\SecurityStub\AssemblyInfo.cs" />
@@ -306,9 +332,6 @@
     <Reference Include="XInputDotNetPure">
       <HintPath>Assets\Base\FacebookSDK\Plugins\Windows\XInputDotNetPure.dll</HintPath>
     </Reference>
-    <Reference Include="DDebug">
-      <HintPath>Assets\Doozy\Engine\Debug\DDebug.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Plastic.Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@1.17.2\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -446,6 +469,24 @@
     </Reference>
     <Reference Include="Facebook.Unity">
       <HintPath>Assets\Base\FacebookSDK\Plugins\Facebook.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="GoogleMobileAds.Common">
+      <HintPath>Assets\GoogleMobileAds\GoogleMobileAds.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="GoogleMobileAds">
+      <HintPath>Assets\GoogleMobileAds\GoogleMobileAds.dll</HintPath>
+    </Reference>
+    <Reference Include="GoogleMobileAds.Unity">
+      <HintPath>Assets\GoogleMobileAds\GoogleMobileAds.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="GoogleMobileAds.Ump">
+      <HintPath>Assets\GoogleMobileAds\GoogleMobileAds.Ump.dll</HintPath>
+    </Reference>
+    <Reference Include="GoogleMobileAds.Core">
+      <HintPath>Assets\GoogleMobileAds\GoogleMobileAds.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="GoogleMobileAds.Ump.Unity">
+      <HintPath>Assets\GoogleMobileAds\GoogleMobileAds.Ump.Unity.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>D:\Unity2020.3.15f2\2020.3.38f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>

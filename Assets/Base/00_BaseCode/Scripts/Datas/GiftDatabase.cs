@@ -40,7 +40,7 @@ public class GiftDatabase : SerializedScriptableObject
         switch (giftType)
         {
             case GiftType.Coin:
-                Config.SetCoin(Config.currCoin + amount);
+               
                 break;
             case GiftType.Heart:
                 UseProfile.Heart += amount;
@@ -50,13 +50,13 @@ public class GiftDatabase : SerializedScriptableObject
                 //GameController.Instance.admobAds.DestroyBanner();
                 break;
             case GiftType.RedoBooster:
-                Config.SetCount_ItemHelp(Config.ITEMHELP_TYPE.UNDO, Config.GetCount_ItemHelp(Config.ITEMHELP_TYPE.UNDO) + amount);
+          
                 break;
             case GiftType.SuportBooster:
-                Config.SetCount_ItemHelp(Config.ITEMHELP_TYPE.SUGGEST, Config.GetCount_ItemHelp(Config.ITEMHELP_TYPE.SUGGEST) + amount);
+              
                 break;
             case GiftType.ShuffleBooster:
-                Config.SetCount_ItemHelp(Config.ITEMHELP_TYPE.SHUFFLE, Config.GetCount_ItemHelp(Config.ITEMHELP_TYPE.SHUFFLE) + amount);
+               
                 break;
 
 
