@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "134484384077",
+    "project_id": "zg-think-it-out",
+    "storage_bucket": "zg-think-it-out.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:134484384077:android:a6048aa3e4758918b37f04",
+        "android_client_info": {
+          "package_name": "com.zstudio.thinkitout"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "134484384077-bd231m9si9gaqdj41h1i7ac3hn85jlrl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkTWnuVLrlwyle7uLeifzcImhlZFrO1is"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "134484384077-bd231m9si9gaqdj41h1i7ac3hn85jlrl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

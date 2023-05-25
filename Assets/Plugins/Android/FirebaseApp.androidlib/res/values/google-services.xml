@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:keep="@string/gcm_defaultSenderId,@string/google_storage_bucket,@string/project_id,@string/google_api_key,@string/google_crash_reporting_api_key,@string/google_app_id,@string/default_web_client_id">
+  <string name="gcm_defaultSenderId" translatable="false">134484384077</string>
+  <string name="google_storage_bucket" translatable="false">zg-think-it-out.appspot.com</string>
+  <string name="project_id" translatable="false">zg-think-it-out</string>
+  <string name="google_api_key" translatable="false">AIzaSyAkTWnuVLrlwyle7uLeifzcImhlZFrO1is</string>
+  <string name="google_crash_reporting_api_key" translatable="false">AIzaSyAkTWnuVLrlwyle7uLeifzcImhlZFrO1is</string>
+  <string name="google_app_id" translatable="false">1:134484384077:android:a6048aa3e4758918b37f04</string>
+  <string name="default_web_client_id" translatable="false">134484384077-bd231m9si9gaqdj41h1i7ac3hn85jlrl.apps.googleusercontent.com</string>
+</resources>

@@ -15,7 +15,7 @@ using UnityEngine.Events;
 public class AdmobAds : MonoBehaviour
 {
 
-    [SerializeField] private AdsController ironsourceController;
+    [SerializeField] private AdsController_Base ironsourceController;
 
 
 #if UNITY_ANDROID

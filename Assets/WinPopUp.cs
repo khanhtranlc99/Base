@@ -6,6 +6,6 @@ public class WinPopUp : MonoBehaviour
 {
     public void Next()
     {
-        GameManager.instance.NextLevel();
+        GameManager_Base.instance.NextLevel();
     }
 }

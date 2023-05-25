@@ -100,7 +100,7 @@ public class LevelController : MonoBehaviour
         }
         if(tileCount == 0)
         {
-            GameManager.instance.WinPhase();
+            GameManager_Base.instance.WinPhase();
         }
         for (int i = 0; i < floors.Length; i++)
         {
